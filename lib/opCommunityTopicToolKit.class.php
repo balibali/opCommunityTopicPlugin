@@ -71,7 +71,7 @@ class opCommunityTopicToolkit
     $config = new sfRoutingConfigHandler();
     $routes = $config->evaluate(array($configPath));
 
-    $routing->setRoutes(array_merge(sfContext::getInstance()->getRouting()->getRoutes(), $routes));
+    $routing->setRoutes($routes);
 
     return $routing->generate($route, $params);
   }
